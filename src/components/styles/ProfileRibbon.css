@@ -1,0 +1,110 @@
+.profile-ribbon {
+  position: relative;
+  z-index: 5;
+  height: 94px;
+  margin-block: -32px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.profile-ribbon-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.profile-ribbon-band {
+  position: absolute;
+  top: 19px;
+  left: -5%;
+  display: flex;
+  width: 110%;
+  min-height: 56px;
+  align-items: center;
+  overflow: hidden;
+  border-block: 1px solid color-mix(in srgb, var(--accentColor) 48%, transparent);
+  background: color-mix(in srgb, var(--surfaceColor) 90%, var(--accentColor) 10%);
+  box-shadow: 0 10px 36px -26px color-mix(in srgb, var(--accentColor) 65%, transparent);
+  transform: rotate(-2deg);
+}
+
+.profile-ribbon-track,
+.profile-ribbon-group {
+  display: flex;
+  width: max-content;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.profile-ribbon-track {
+  animation: profile-ribbon-scroll 34s linear infinite;
+}
+
+.profile-ribbon-group {
+  gap: clamp(22px, 3.6vw, 52px);
+  padding-inline: clamp(22px, 3.6vw, 52px);
+}
+
+.profile-ribbon-item {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 38px);
+  color: var(--textColor);
+  font-size: clamp(12px, 1.15vw, 15px);
+  font-weight: 650;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.profile-ribbon-star {
+  color: var(--accentColor);
+  font-size: 17px;
+}
+
+@keyframes profile-ribbon-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+html[dir="rtl"] .profile-ribbon-track {
+  animation-name: profile-ribbon-scroll-rtl;
+}
+
+@keyframes profile-ribbon-scroll-rtl {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+
+@media (max-width: 767px) {
+  .profile-ribbon {
+    height: 78px;
+    margin-block: -24px;
+  }
+
+  .profile-ribbon-band {
+    top: 15px;
+    min-height: 48px;
+    transform: rotate(-2.5deg);
+  }
+
+  .profile-ribbon-item {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-ribbon-track {
+    animation: none;
+    transform: translateX(-25%);
+  }
+
+  html[dir="rtl"] .profile-ribbon-track {
+    transform: translateX(25%);
+  }
+}

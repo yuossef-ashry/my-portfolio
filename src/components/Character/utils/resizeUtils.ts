@@ -1,0 +1,17 @@
+import * as THREE from "three";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+export default function handleResize(
+  renderer: THREE.WebGLRenderer,
+  camera: THREE.PerspectiveCamera,
+  canvasDiv: React.RefObject<HTMLDivElement>
+) {
+  if (!canvasDiv.current) return;
+  const canvas3d = canvasDiv.current.getBoundingClientRect();
+  const width = Math.max(canvas3d.width, 1);
+  const height = Math.max(canvas3d.height, 1);
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+  ScrollTrigger.refresh();
+}

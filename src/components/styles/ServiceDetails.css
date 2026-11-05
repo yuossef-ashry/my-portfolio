@@ -1,0 +1,199 @@
+.service-details-section {
+  position: relative;
+  padding: clamp(76px, 9vw, 122px) 0;
+  scroll-margin-top: 120px;
+}
+
+.service-details-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.service-details-head {
+  max-width: 780px;
+}
+
+.service-details-head .section-kicker {
+  margin-bottom: 14px;
+}
+
+.service-details-head > p:last-child {
+  max-width: 62ch;
+  margin: 17px 0 0;
+  color: var(--mutedColor);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.service-details-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+  min-width: 0;
+  padding: clamp(20px, 2.5vw, 27px);
+  border: 1px solid var(--borderColor);
+  border-radius: 18px;
+  background: var(--surfaceColor);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.service-detail:hover {
+  transform: translateY(-3px);
+  border-color: var(--accentColor);
+  box-shadow: var(--shadow-elevated);
+}
+
+.service-detail:last-child {
+  grid-column: 1 / -1;
+}
+
+.service-detail-number {
+  padding-top: 3px;
+  color: var(--accentColor);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+
+.service-detail-copy {
+  min-width: 0;
+}
+
+.service-detail h3 {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 25px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.28;
+}
+
+.service-detail-description {
+  margin: 10px 0 0;
+  color: var(--textColor);
+  opacity: 0.82;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.service-detail-includes {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid var(--borderColor);
+}
+
+.service-detail-includes > span {
+  color: var(--accentColor);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.service-detail-includes p {
+  margin: 5px 0 0;
+  color: var(--mutedColor);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.service-details-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid color-mix(in srgb, var(--accentColor) 32%, var(--borderColor));
+  border-radius: 20px;
+  background:
+    radial-gradient(75% 150% at 100% 100%, rgba(245, 158, 11, 0.12), transparent 72%),
+    var(--surfaceColor);
+  box-shadow: var(--shadow-card);
+}
+
+.service-details-custom h3 {
+  margin: 0;
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.service-details-custom p {
+  max-width: 62ch;
+  margin: 8px 0 0;
+  color: var(--mutedColor);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.service-details-custom a {
+  display: inline-flex;
+  min-height: 46px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  border: 1px solid var(--accentColor);
+  border-radius: 11px;
+  background: var(--accentColor);
+  color: var(--backgroundColor);
+  box-shadow: var(--shadow-control);
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-details-custom a:hover,
+.service-details-custom a:focus-visible {
+  transform: translateY(-2px);
+  color: var(--backgroundColor);
+  box-shadow: var(--shadow-elevated);
+}
+
+.service-details-custom a:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accentColor) 35%, transparent);
+  outline-offset: 3px;
+}
+
+.service-details-custom svg {
+  font-size: 16px;
+}
+
+html[dir="rtl"] .service-detail h3,
+html[dir="rtl"] .service-details-custom h3 {
+  letter-spacing: 0;
+}
+
+@media (max-width: 760px) {
+  .service-details-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail:last-child {
+    grid-column: auto;
+  }
+
+  .service-details-custom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .service-details-custom a {
+    align-self: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-detail,
+  .service-details-custom a {
+    transition: none;
+  }
+}

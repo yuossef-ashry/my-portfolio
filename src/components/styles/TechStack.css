@@ -1,0 +1,17 @@
+.techstack { position: relative; padding: clamp(72px, 9vw, 116px) 0; }
+.techstack-head { max-width: 640px; margin: 0 auto; text-align: center; }
+.techstack-head > p:last-child { max-width: 52ch; margin: 18px auto 0; color: var(--mutedColor); font-size: 15px; line-height: 1.65; }
+.tech-canvas-wrap { height: clamp(260px, 34vw, 420px); margin: 4px auto 10px; }
+.tech-canvas { width: 100% !important; height: 100% !important; }
+.techstack-list { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+.techstack-list li { display: flex; min-width: 0; align-items: center; justify-content: center; gap: 8px; padding: 13px 10px; border: 1px solid var(--borderColor); border-radius: 14px; background-color: var(--surfaceColor); color: var(--textColor); box-shadow: var(--shadow-control); font-size: 13px; font-weight: 500; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.techstack-list li:hover { transform: translateY(-2px); border-color: var(--accentColor); box-shadow: var(--shadow-card); }
+.techstack-list img { width: 19px; height: 19px; flex: 0 0 auto; object-fit: contain; }
+@media (max-width: 1000px) { .techstack-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 560px) {
+  .techstack { padding: 72px 0; }
+  .techstack-head { text-align: start; }
+  .techstack-head > p:last-child { margin-inline-start: 0; }
+  .techstack-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .techstack-list li { justify-content: flex-start; padding: 12px; }
+}

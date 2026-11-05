@@ -1,0 +1,156 @@
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:active,
+a:active {
+  filter: brightness(0.94);
+}
+
+.work-card:hover .work-preview-orbit {
+  border-color: color-mix(in srgb, var(--accentBright) 78%, var(--accentColor));
+  transform: translate(-50%, -50%) rotate(18deg) scale(1.08);
+}
+
+.work-preview-orbit,
+.work-preview-orbit::after,
+.work-preview-line,
+.techstack-list li,
+.techstack-list img,
+.site-nav a::after,
+.language-option svg,
+.landing-project-cta span:last-child,
+.work-link svg,
+.package-btn svg,
+.packages-custom-btn svg,
+.process-footer a svg,
+.contact-form button svg,
+.contact-socials svg {
+  transition-property: transform, opacity, border-color, box-shadow;
+  transition-duration: 0.24s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.work-preview-orbit::after {
+  transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.work-card:hover .work-preview-orbit::after {
+  transform: scale(0.88);
+}
+
+.work-card:hover .work-preview-line--one {
+  transform: scaleX(1.16);
+  transform-origin: left center;
+}
+
+.work-card:hover .work-preview-line--two {
+  transform: scaleX(1.2);
+  transform-origin: right center;
+}
+
+.techstack-list li:hover,
+.techstack-list li:focus-within {
+  transform: translateY(-3px);
+  border-color: var(--accentColor);
+  box-shadow: 0 12px 26px -22px color-mix(in srgb, var(--accentColor) 70%, transparent);
+}
+
+.techstack-list li:hover img,
+.techstack-list li:focus-within img {
+  transform: rotate(-8deg) scale(1.12);
+}
+
+.work-filter:hover,
+.work-filter:focus-visible {
+  transform: translateY(-2px);
+}
+
+.work-filter {
+  transition:
+    transform 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.language-option:hover svg,
+.language-option[aria-pressed="true"] svg {
+  transform: scale(1.12);
+}
+
+:is(.work-link, .package-btn, .packages-custom-btn, .process-footer a, .contact-form button, .contact-socials a):hover svg {
+  transform: translateX(3px) rotate(-4deg);
+}
+
+html[dir="rtl"] :is(.work-link, .package-btn, .packages-custom-btn, .process-footer a, .contact-form button, .contact-socials a):hover svg {
+  transform: translateX(-3px) rotate(4deg);
+}
+
+@media (min-width: 1101px) {
+  .site-nav a {
+    position: relative;
+  }
+
+  .site-nav a::after {
+    position: absolute;
+    inset-inline-start: 9px;
+    bottom: 3px;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--accentBright);
+    content: "";
+    transition: width 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .site-nav a:hover::after,
+  .site-nav a:focus-visible::after,
+  .site-nav a[aria-current="location"]::after {
+    width: calc(100% - 18px);
+  }
+}
+
+@media (max-width: 767px) {
+  .site-nav a::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav a::after,
+  .work-preview-orbit,
+  .work-preview-orbit::after,
+  .work-preview-line,
+  .techstack-list li,
+  .techstack-list img,
+  .work-filter,
+  .language-option svg,
+  .landing-project-cta span:last-child,
+  .work-link svg,
+  .package-btn svg,
+  .packages-custom-btn svg,
+  .process-footer a svg,
+  .contact-form button svg,
+  .contact-socials svg {
+    transition: none !important;
+  }
+
+  button:active,
+  a:active {
+    filter: none;
+  }
+
+  .work-card:hover .work-preview-orbit,
+  .work-card:hover .work-preview-orbit::after,
+  .work-card:hover .work-preview-line,
+  .techstack-list li:hover,
+  .techstack-list li:focus-within,
+  .techstack-list li:hover img,
+  .techstack-list li:focus-within img,
+  .work-filter:hover,
+  .work-filter:focus-visible {
+    transform: none;
+  }
+}

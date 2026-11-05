@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", "IBM Plex Sans Arabic", sans-serif;
+
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  color-scheme: light;
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* ---- Theme tokens (light + amber) ---- */
+  --accentColor: #b45309; /* text & links (AA on light) */
+  --accentBright: #f59e0b; /* glows, dots, shapes */
+  --accentGlow: #fbbf24;
+  --backgroundColor: #faf7f2;
+  --surfaceColor: #ffffff;
+  --textColor: #16120d;
+  --mutedColor: #6b6257;
+  --borderColor: #e4ded4;
+  --shadow-control: 0 4px 12px -8px rgba(22, 18, 13, 0.22);
+  --shadow-card: 0 14px 34px -24px rgba(22, 18, 13, 0.3), 0 3px 9px -7px rgba(22, 18, 13, 0.15);
+  --shadow-elevated: 0 24px 48px -28px rgba(22, 18, 13, 0.42), 0 7px 16px -12px rgba(22, 18, 13, 0.18);
+  --bgTransparent: rgba(250, 247, 242, 0);
+  --vh: 100vh;
+  --vh: 100svh;
+}
+
+html[lang="ar"] {
+  font-family: "IBM Plex Sans Arabic", "DM Sans", sans-serif;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --accentColor: #f59e0b;
+  --accentBright: #fbbf24;
+  --accentGlow: #fcd34d;
+  --backgroundColor: #060911;
+  --surfaceColor: #0d1421;
+  --textColor: #f1f5f9;
+  --mutedColor: #97a6ba;
+  --borderColor: #1e293b;
+  --shadow-control: 0 5px 14px -8px rgba(0, 0, 0, 0.72);
+  --shadow-card: 0 16px 36px -22px rgba(0, 0, 0, 0.78), 0 4px 11px -8px rgba(0, 0, 0, 0.55);
+  --shadow-elevated: 0 24px 50px -24px rgba(0, 0, 0, 0.88), 0 8px 18px -12px rgba(0, 0, 0, 0.62);
+  --bgTransparent: rgba(6, 9, 17, 0);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+}
+body {
+  overflow: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--accentColor);
+}
+main {
+  opacity: 1;
+  transition: 0.3s;
+}
+.main-active {
+  opacity: 0;
+  animation: fadeIn 1s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  margin: 0;
+  height: auto;
+  background-color: var(--backgroundColor);
+  flex-grow: 1;
+  --cWidth: calc(100% - 30px);
+  --cMaxWidth: 1920px;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.main-body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.container-main {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+.container1 {
+  width: var(--cWidth);
+  height: var(--vh);
+  margin: auto;
+  position: relative;
+}
+.split-line {
+  overflow: hidden;
+}
+.split-h2 {
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.about-section,
+.whatIDO,
+.service-details-section,
+.career-section,
+.work-section,
+.techstack,
+.process-section,
+.contact-section {
+  scroll-margin-top: 120px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    --cWidth: 94%;
+  }
+}

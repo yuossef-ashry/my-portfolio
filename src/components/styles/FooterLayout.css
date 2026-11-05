@@ -1,0 +1,5 @@
+.footer { position: relative; margin: 0 auto; padding: 22px 0 28px; border-top: 1px solid var(--borderColor); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: var(--mutedColor); font-size: 13px; }
+.footer-bottom a { color: var(--textColor); font-weight: 600; transition: color 0.2s ease; }
+.footer-bottom a:hover { color: var(--accentColor); }
+@media (max-width: 560px) { .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; } }

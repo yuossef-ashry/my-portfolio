@@ -1,0 +1,81 @@
+.section-container {
+  width: min(1200px, calc(100% - 96px));
+  margin-inline: auto;
+}
+.title,
+.para {
+  font-kerning: none;
+  -webkit-text-rendering: optimizeSpeed;
+  text-rendering: optimizeSpeed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.section-kicker {
+  margin: 0 0 14px;
+  color: var(--accentColor);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.section-title {
+  margin: 0;
+  font-size: clamp(38px, 5.2vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+}
+.section-title span {
+  color: var(--accentColor);
+}
+@media only screen and (max-width: 900px) {
+  .section-container {
+    width: calc(100% - 48px);
+  }
+}
+@media only screen and (max-width: 560px) {
+  .section-container {
+    width: calc(100% - 36px);
+  }
+}
+
+html[dir="rtl"] .section-kicker {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] :is(
+    .section-title,
+    .about-title,
+    .career-head h2,
+    .career-role h3,
+    .what-card h3,
+    .work-card-content h3,
+    .packages-head h2,
+    .package-card-heading h3,
+    .packages-custom-copy h3,
+    .contact-heading h2,
+    .contact-form-header h3
+  ) {
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+html[dir="rtl"] :is(
+    .what-label,
+    .work-category,
+    .contact-direct-label,
+    .contact-form label > span,
+    .contact-form-header > p,
+    .landing-kicker,
+    .landing-info h3,
+    .landing-scroll-cue,
+    .top-bar,
+    .site-nav li,
+    .package-flag,
+    .package-price-label,
+    .package-price-note,
+    .package-price small
+  ) {
+  letter-spacing: 0;
+}

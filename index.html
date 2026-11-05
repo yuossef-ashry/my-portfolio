@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youssef Al-Ashry - Junior Frontend Developer | React.js</title>
+
+    <meta
+      name="description"
+      content="Youssef Al-Ashry is a frontend developer focused on turning ideas into modern, scalable, and responsive React experiences through clean JavaScript, thoughtful design, and seamless user experiences."
+    />
+    <meta name="author" content="Youssef Al-Ashry" />
+    <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#060911" media="(prefers-color-scheme: dark)" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Youssef Al-Ashry" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:title"
+      content="Youssef Al-Ashry — Junior Frontend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Responsive, accessible websites and React interfaces. Selected projects, pricing, and process."
+    />
+    <meta property="og:image" content="/og-cover.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Youssef Al-Ashry — Junior Frontend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Responsive, accessible websites and React interfaces. Selected projects, pricing, and process."
+    />
+    <meta name="twitter:image" content="/og-cover.png" />
+
+    <!--
+      NOTE: og:image and canonical should be switched to absolute URLs
+      (https://your-domain.example/og-cover.png) once the production domain
+      is known. Search engines need <link rel="canonical"> for the same reason.
+    -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Youssef Al-Ashry",
+        "jobTitle": "Junior Frontend Developer",
+        "email": "mailto:yaasef0100@gmail.com",
+        "telephone": "+201214858840",
+        "knowsAbout": [
+          "Frontend development",
+          "React",
+          "Responsive design",
+          "Web accessibility"
+        ],
+        "sameAs": [
+          "https://github.com/yuossef-ashry",
+          "https://www.linkedin.com/in/youssef-mohammed-al-ashry"
+        ]
+      }
+    </script>
+
+    <script>
+      // Apply the saved theme and language before first paint (no flash of the
+      // wrong theme or the wrong text direction)
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("theme") || "light"
+      );
+      var savedLang = localStorage.getItem("lang") === "ar" ? "ar" : "en";
+      document.documentElement.setAttribute("lang", savedLang);
+      document.documentElement.setAttribute(
+        "dir",
+        savedLang === "ar" ? "rtl" : "ltr"
+      );
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
