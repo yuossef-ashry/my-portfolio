@@ -1,9 +1,9 @@
 import {
-  FiBox,
-  FiCalendar,
   FiGlobe,
+  FiLayers,
   FiSettings,
   FiShoppingCart,
+  FiUser,
 } from "react-icons/fi";
 import type { IconType } from "react-icons";
 import { MdArrowOutward } from "react-icons/md";
@@ -13,9 +13,9 @@ import "./styles/WhatIDoLayout.css";
 
 const serviceIcons: Record<string, IconType> = {
   "01": FiGlobe,
-  "02": FiBox,
-  "03": FiShoppingCart,
-  "04": FiCalendar,
+  "02": FiUser,
+  "03": FiLayers,
+  "04": FiShoppingCart,
   "05": FiSettings,
 };
 
@@ -72,9 +72,9 @@ const WhatIDo = () => {
                         .getElementById("contact-name")
                         ?.focus({ preventScroll: true });
                     }}
-                    aria-label={`${t.whatIDo.cta}: ${service.title}`}
+                    aria-label={`${service.cta}: ${service.title}`}
                   >
-                    <span>{t.whatIDo.cta}</span>
+                    <span>{service.cta}</span>
                     <MdArrowOutward aria-hidden="true" />
                   </a>
                 </div>

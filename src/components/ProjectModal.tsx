@@ -53,11 +53,12 @@ const ProjectModal = ({ project, copy, onClose }: ProjectModalProps) => {
 
     const previouslyFocused = document.activeElement as HTMLElement | null;
     const previousOverflow = document.body.style.overflow;
+    const previousOverflowY = document.body.style.overflowY;
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose();
     };
 
-    setMode(project.links.live ? "live" : "visual");
+    setMode("visual");
     setDevice("desktop");
     setLiveLoaded(false);
     document.body.style.overflow = "hidden";
@@ -66,6 +67,7 @@ const ProjectModal = ({ project, copy, onClose }: ProjectModalProps) => {
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      document.body.style.overflowY = previousOverflowY;
       window.removeEventListener("keydown", handleKeyDown);
       previouslyFocused?.focus();
     };

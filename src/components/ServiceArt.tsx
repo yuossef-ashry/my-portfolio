@@ -1,6 +1,47 @@
 type ServiceArtProps = { number: string };
 
 const ServiceArt = ({ number }: ServiceArtProps) => {
+  if (number === "03") {
+    return (
+      <svg viewBox="0 0 240 168" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="app-bg" x1="0" x2="1" y1="0" y2="1">
+            <stop stopColor="#111827" />
+            <stop offset="1" stopColor="#1e3a5f" />
+          </linearGradient>
+        </defs>
+        <rect width="240" height="168" rx="18" fill="url(#app-bg)" />
+        <rect x="20" y="19" width="200" height="130" rx="11" fill="#f8fafc" />
+        <path d="M31 19h178a11 11 0 0 1 11 11v12H20V30a11 11 0 0 1 11-11z" fill="#e9eef5" />
+        <circle cx="34" cy="31" r="3" fill="#8b5cf6" />
+        <circle cx="45" cy="31" r="3" fill="#cbd5e1" />
+        <circle cx="56" cy="31" r="3" fill="#cbd5e1" />
+        <path d="M20 42h39v107H31a11 11 0 0 1-11-11z" fill="#172238" />
+        <circle cx="39" cy="58" r="7" fill="#8b5cf6" />
+        <rect x="31" y="75" width="17" height="3" rx="1.5" fill="#8291a8" />
+        <rect x="31" y="87" width="20" height="3" rx="1.5" fill="#8291a8" />
+        <rect x="31" y="99" width="14" height="3" rx="1.5" fill="#8291a8" />
+        <rect x="31" y="111" width="19" height="3" rx="1.5" fill="#8291a8" />
+        <rect x="71" y="55" width="65" height="6" rx="3" fill="#1e293b" />
+        <rect x="71" y="66" width="43" height="4" rx="2" fill="#94a3b8" />
+        <rect x="71" y="80" width="42" height="24" rx="5" fill="#ede9fe" />
+        <rect x="118" y="80" width="42" height="24" rx="5" fill="#e0f2fe" />
+        <rect x="165" y="80" width="42" height="24" rx="5" fill="#dcfce7" />
+        <rect x="77" y="87" width="17" height="3" rx="1.5" fill="#8b5cf6" />
+        <rect x="77" y="94" width="24" height="4" rx="2" fill="#334155" />
+        <rect x="124" y="87" width="18" height="3" rx="1.5" fill="#0ea5e9" />
+        <rect x="124" y="94" width="23" height="4" rx="2" fill="#334155" />
+        <rect x="171" y="87" width="16" height="3" rx="1.5" fill="#10b981" />
+        <rect x="171" y="94" width="22" height="4" rx="2" fill="#334155" />
+        <rect x="71" y="112" width="88" height="26" rx="5" fill="#f1f5f9" />
+        <path d="M78 131l14-9 12 5 13-10 12 6 19-8" fill="none" stroke="#8b5cf6" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        <rect x="165" y="112" width="42" height="26" rx="5" fill="#f1f5f9" />
+        <circle cx="186" cy="122" r="6" fill="#38bdf8" opacity=".8" />
+        <rect x="174" y="132" width="24" height="3" rx="1.5" fill="#94a3b8" />
+      </svg>
+    );
+  }
+
   if (number === "01") {
     return (
       <svg viewBox="0 0 240 168" aria-hidden="true" focusable="false">
@@ -72,7 +113,7 @@ const ServiceArt = ({ number }: ServiceArtProps) => {
     );
   }
 
-  if (number === "03") {
+  if (number === "04") {
     return (
       <svg viewBox="0 0 240 168" aria-hidden="true" focusable="false">
         <defs>
@@ -103,7 +144,7 @@ const ServiceArt = ({ number }: ServiceArtProps) => {
     );
   }
 
-  if (number === "04") {
+  if (number === "06") {
     return (
       <svg viewBox="0 0 240 168" aria-hidden="true" focusable="false">
         <defs>
