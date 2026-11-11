@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import "./styles/CareerLayout.css";
 
 const Career = () => {
@@ -76,7 +76,7 @@ const Career = () => {
                   className="career-verification"
                   href={experience.verificationUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   {t.career.verifyLabel}
                   <span aria-hidden="true">↗</span>

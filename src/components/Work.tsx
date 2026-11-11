@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import ProjectPreview from "./ProjectPreview";
 import ProjectModal, { type PortfolioProject } from "./ProjectModal";
+import { publicAsset } from "../utils/publicAsset";
 import "./styles/WorkLayout.css";
 
 type ProjectCategory = "website" | "application";
@@ -79,6 +80,7 @@ const Work = () => {
 
   const projects = t.work.projects.map((project) => ({
     ...project,
+    image: project.image ? publicAsset(project.image) : undefined,
     category: categories[project.slug] ?? "website",
     links: projectLinks[project.slug] ?? {},
   }));
@@ -163,7 +165,7 @@ const Work = () => {
                   className="work-link"
                   href={project.links.live}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   {t.work.liveDemo} <MdArrowOutward aria-hidden="true" />
                 </a>
@@ -173,7 +175,7 @@ const Work = () => {
                   className="work-link"
                   href={project.links.repo}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   {t.work.sourceCode} <MdArrowOutward aria-hidden="true" />
                 </a>

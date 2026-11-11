@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youssef Al-Ashry - Junior Frontend Developer | React.js</title>
+    <title>Youssef Al-Ashry — Frontend Developer</title>
 
     <meta
       name="description"
-      content="Youssef Al-Ashry is a frontend developer focused on turning ideas into modern, scalable, and responsive React experiences through clean JavaScript, thoughtful design, and seamless user experiences."
+      content="Youssef Al-Ashry builds responsive websites and web applications with React, JavaScript, and thoughtful user experiences. Explore selected projects and services."
     />
     <meta name="author" content="Youssef Al-Ashry" />
     <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)" />
@@ -15,39 +15,35 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap"
+    />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="apple-touch-icon" href="%BASE_URL%favicon.svg" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Youssef Al-Ashry" />
     <meta property="og:locale" content="en_US" />
     <meta
       property="og:title"
-      content="Youssef Al-Ashry — Junior Frontend Developer"
+      content="Youssef Al-Ashry — Frontend Developer"
     />
     <meta
       property="og:description"
-      content="Responsive, accessible websites and React interfaces. Selected projects, pricing, and process."
+      content="Responsive websites and React interfaces. Selected projects, services, pricing, and process."
     />
-    <meta property="og:image" content="/og-cover.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Youssef Al-Ashry — Junior Frontend Developer"
+      content="Youssef Al-Ashry — Frontend Developer"
     />
     <meta
       name="twitter:description"
-      content="Responsive, accessible websites and React interfaces. Selected projects, pricing, and process."
+      content="Responsive websites and React interfaces. Selected projects, services, pricing, and process."
     />
-    <meta name="twitter:image" content="/og-cover.png" />
-
-    <!--
-      NOTE: og:image and canonical should be switched to absolute URLs
-      (https://your-domain.example/og-cover.png) once the production domain
-      is known. Search engines need <link rel="canonical"> for the same reason.
-    -->
 
     <script type="application/ld+json">
       {
@@ -71,13 +67,16 @@
     </script>
 
     <script>
-      // Apply the saved theme and language before first paint (no flash of the
-      // wrong theme or the wrong text direction)
-      document.documentElement.setAttribute(
-        "data-theme",
-        localStorage.getItem("theme") || "light"
-      );
-      var savedLang = localStorage.getItem("lang") === "ar" ? "ar" : "en";
+      // Apply saved preferences before paint when browser storage is available.
+      var savedTheme = "light";
+      var savedLang = "en";
+      try {
+        savedTheme = localStorage.getItem("theme") || "light";
+        savedLang = localStorage.getItem("lang") === "ar" ? "ar" : "en";
+      } catch {
+        // Storage may be disabled; defaults keep the page usable.
+      }
+      document.documentElement.setAttribute("data-theme", savedTheme);
       document.documentElement.setAttribute("lang", savedLang);
       document.documentElement.setAttribute(
         "dir",

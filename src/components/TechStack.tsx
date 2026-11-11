@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { technologies } from "./techStackData";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import "./styles/TechStack.css";
 
 const TechStackCanvas = lazy(() => import("./TechStackCanvas"));

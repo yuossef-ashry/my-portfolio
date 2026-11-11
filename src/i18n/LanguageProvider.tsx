@@ -1,22 +1,12 @@
 import {
-  createContext,
-  useContext,
   useLayoutEffect,
   useState,
   type PropsWithChildren,
 } from "react";
-import { dictionaries, type Dictionary, type Lang } from "./translations";
+import { LanguageContext } from "./LanguageContext";
+import { dictionaries, type Lang } from "./translations";
 
 const STORAGE_KEY = "lang";
-
-type LanguageValue = {
-  lang: Lang;
-  dir: "ltr" | "rtl";
-  t: Dictionary;
-  setLang: (next: Lang) => void;
-};
-
-const LanguageContext = createContext<LanguageValue | null>(null);
 
 const readInitialLang = (): Lang => {
   try {
@@ -43,9 +33,9 @@ export const LanguageProvider = ({ children }: PropsWithChildren) => {
             locale: "ar_EG",
           }
         : {
-            title: "Youssef Al-Ashry — Junior Frontend Developer | React.js",
+            title: "Youssef Al-Ashry — Frontend Developer",
             description:
-              "Youssef Al-Ashry is a frontend developer focused on turning ideas into modern, scalable, and responsive React experiences through clean JavaScript, thoughtful design, and seamless user experiences.",
+              "Youssef Al-Ashry builds responsive websites and web applications with React, JavaScript, and thoughtful user experiences. Explore selected projects and services.",
             locale: "en_US",
           };
 
@@ -76,7 +66,7 @@ export const LanguageProvider = ({ children }: PropsWithChildren) => {
     try {
       window.localStorage.setItem(STORAGE_KEY, next);
     } catch {
-      /* storage unavailable — the language still switches for this visit */
+      // The language still switches for this visit if storage is unavailable.
     }
   };
 
@@ -85,12 +75,4 @@ export const LanguageProvider = ({ children }: PropsWithChildren) => {
       {children}
     </LanguageContext.Provider>
   );
-};
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  }
-  return context;
 };

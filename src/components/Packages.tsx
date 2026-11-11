@@ -1,5 +1,5 @@
 import { MdCheck, MdArrowOutward } from "react-icons/md";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import "./styles/Packages.css";
 
 const featuredIndex = 1;

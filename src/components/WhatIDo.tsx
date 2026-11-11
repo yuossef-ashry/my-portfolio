@@ -7,7 +7,7 @@ import {
 } from "react-icons/fi";
 import type { IconType } from "react-icons";
 import { MdArrowOutward } from "react-icons/md";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import ServiceArt from "./ServiceArt";
 import "./styles/WhatIDoLayout.css";
 

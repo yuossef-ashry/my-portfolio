@@ -1,6 +1,7 @@
 import * as THREE from "three";
-import { RGBELoader } from "three-stdlib";
+import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
 import { gsap } from "gsap";
+import { publicAsset } from "../../../utils/publicAsset";
 
 export type ScreenLight = THREE.Mesh<
   THREE.BufferGeometry,
@@ -26,7 +27,7 @@ const setLighting = (scene: THREE.Scene) => {
   let disposed = false;
   let environmentTexture: THREE.DataTexture | null = null;
   new RGBELoader()
-    .setPath("/models/")
+    .setPath(publicAsset("models/"))
     .load("char_enviorment.hdr", (texture) => {
       if (disposed) {
         texture.dispose();

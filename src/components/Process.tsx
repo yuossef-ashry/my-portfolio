@@ -1,4 +1,4 @@
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import { MdArrowOutward } from "react-icons/md";
 import "./styles/ProcessLayout.css";
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BsArrowUp } from "react-icons/bs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import { getSmoother } from "./utils/smoothScroll";
 import "./styles/BackToTop.css";
 

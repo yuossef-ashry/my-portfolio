@@ -4,8 +4,8 @@ import HoverLinks from "./HoverLinks";
 import LanguageToggle from "./LanguageToggle";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { BsMoonStars, BsPlus, BsSunFill, BsX } from "react-icons/bs";
-import { useLanguage } from "../i18n/LanguageContext";
+import { BsList, BsMoonStars, BsSunFill, BsX } from "react-icons/bs";
+import { useLanguage } from "../i18n/useLanguage";
 import { getSmoother, setSmoother } from "./utils/smoothScroll";
 import "./styles/Navbar.css";
 
@@ -15,12 +15,13 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 const navigation = [
   ["home", "#landingDiv"],
   ["about", "#about"],
-  ["services", "#services"],
   ["career", "#career"],
   ["work", "#work"],
-  ["pricing", "#packages"],
   ["toolkit", "#toolkit"],
+  ["services", "#services"],
+  ["serviceDetails", "#service-details"],
   ["process", "#process"],
+  ["pricing", "#packages"],
   ["contact", "#contact"],
 ] as const;
 
@@ -62,7 +63,11 @@ const Navbar = () => {
   const toggleTheme = () => {
     const next = theme === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
+    try {
+      localStorage.setItem("theme", next);
+    } catch {
+      // Keep the theme toggle usable when browser storage is disabled.
+    }
     const bg = getComputedStyle(document.documentElement)
       .getPropertyValue("--backgroundColor")
       .trim();
@@ -280,7 +285,10 @@ const Navbar = () => {
             <circle cx="76" cy="24" r="4" fill="#f59e0b" />
           </svg>
           <span className="logo-text">
-            YOUSSEF<span>.</span>
+            {lang === "ar" ? "يوسف" : "Youssef"}<span>.</span>
+          </span>
+          <span className="logo-surname">
+            {lang === "ar" ? "العشري" : "Al-Ashry"}
           </span>
         </a>
 
@@ -328,6 +336,21 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="site-nav-footer">
+            <span className="site-nav-availability">
+              <span className="top-bar-dot" aria-hidden="true" />
+              {t.nav.topBarShort}
+            </span>
+            <a
+              className="site-nav-cta"
+              href="#contact"
+              data-href="#contact"
+              data-cursor="disable"
+            >
+              {t.nav.topBarCta}
+              <span aria-hidden="true">{lang === "ar" ? "↖" : "↗"}</span>
+            </a>
+          </div>
         </nav>
 
         <div className="header-actions">
@@ -344,7 +367,7 @@ const Navbar = () => {
               {menuOpen ? t.nav.closeLabel : t.nav.menuLabel}
             </span>
             <span className="menu-toggle-icon" aria-hidden="true">
-              {menuOpen ? <BsX /> : <BsPlus />}
+              {menuOpen ? <BsX /> : <BsList />}
             </span>
           </button>
           <button

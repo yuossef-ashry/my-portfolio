@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import "./styles/Landing.css";
 
 const Landing = ({ children }: PropsWithChildren) => {

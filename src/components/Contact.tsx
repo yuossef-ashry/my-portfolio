@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import "./styles/ContactLayout.css";
 
 const WHATSAPP_NUMBER = "201214858840";
@@ -140,7 +140,7 @@ const Contact = () => {
                 href={social.href}
                 key={social.label}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 data-cursor="disable"
               >
                 {social.label}

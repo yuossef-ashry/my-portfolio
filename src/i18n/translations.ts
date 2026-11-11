@@ -9,12 +9,13 @@ export const en = {
     links: {
       home: "Home",
       about: "About",
-      services: "Services",
       career: "Career",
       work: "Work",
-      pricing: "Pricing",
       toolkit: "Toolkit",
+      services: "Services",
+      serviceDetails: "Service details",
       process: "Process",
+      pricing: "Pricing",
       contact: "Contact",
     },
     openMenu: "Open section menu",
@@ -23,8 +24,9 @@ export const en = {
     closeLabel: "Close",
     themeToLight: "Switch to light theme",
     themeToDark: "Switch to dark theme",
-    languageLabel: "Choose language",
-    navigationLabel: "Main navigation",
+    switchToArabic: "Switch to Arabic",
+    switchToEnglish: "Switch to English",
+    navigationLabel: "Explore the portfolio",
     backToTop: "Back to top",
   },
   loading: {
@@ -296,7 +298,7 @@ export const en = {
         subtitle: "Social Networking Web App",
         description:
           "A social platform for creating an account, managing a profile, sharing posts, and joining conversations through comments.",
-        image: "/images/projects/media-app.png",
+        image: "/images/projects/media-app.jpg",
         highlights: [
           "Sign-up, sign-in, and password updates",
           "Create, edit, and delete posts",
@@ -318,7 +320,7 @@ export const en = {
         subtitle: "Photography Blog Platform",
         description:
           "A photography blog for browsing, searching, and filtering articles, switching between grid and list views, and reading full post pages.",
-        image: "/images/projects/adasa.png",
+        image: "/images/projects/adasa.jpg",
         highlights: [
           "Search articles and filter by category",
           "Switch between grid and list layouts",
@@ -340,7 +342,7 @@ export const en = {
         subtitle: "Task Management Board",
         description:
           "An interactive Kanban board for organizing tasks into To Do, In Progress, and Completed, with changes saved in the browser.",
-        image: "/images/projects/kanban.png",
+        image: "/images/projects/kanban.jpg",
         highlights: [
           "Create, view, edit, and delete tasks",
           "Move tasks between workflow columns",
@@ -361,7 +363,7 @@ export const en = {
         subtitle: "Live Space Data Dashboard",
         description:
           "An interactive space dashboard that brings NASA's daily astronomy image, upcoming launches, and Solar System planet data together.",
-        image: "/images/projects/space-dashboard.png",
+        image: "/images/projects/space-dashboard.jpg",
         highlights: [
           "NASA Astronomy Picture of the Day and details",
           "Upcoming launches from SpaceDevs",
@@ -383,7 +385,7 @@ export const en = {
         subtitle: "Responsive Portfolio Starter",
         description:
           "A responsive personal portfolio starter with sections for an introduction, skills, selected work, experience, testimonials, and contact.",
-        image: "/images/projects/modern-developer-portfolio.png",
+        image: "/images/projects/modern-developer-portfolio.jpg",
         highlights: [
           "Responsive portfolio layout with Arabic RTL support",
           "Sections for skills, projects, experience, and testimonials",
@@ -404,7 +406,7 @@ export const en = {
         subtitle: "Flutter Developer Portfolio · Client Project",
         description:
           "A commissioned portfolio website for Flutter developer Ali Emad, designed to present his mobile apps, technical expertise, experience, services, and contact options in one polished experience.",
-        image: "/images/projects/ali-emad-portfolio.png",
+        image: "/images/projects/ali-emad-portfolio.jpg",
         highlights: [
           "A custom dark visual identity and responsive developer introduction",
           "Dedicated sections for skills, experience, projects, services, and contact",
@@ -429,7 +431,7 @@ export const en = {
         subtitle: "Contact Management App",
         description:
           "A modern contact manager that turns a traditional phone book into an interactive workspace for organizing, finding, and reaching people.",
-        image: "/images/projects/contact-hub.png",
+        image: "/images/projects/contact-hub.jpg",
         highlights: [
           "Create, edit, and delete contacts with validated forms",
           "Search by name, phone number, or email address",
@@ -452,7 +454,7 @@ export const en = {
         subtitle: "Smart Nutrition Tracker",
         description:
           "A nutrition tracking web app for discovering meals, exploring food products, and monitoring daily calories and macronutrients in one place.",
-        image: "/images/projects/personalized-nutrition.png",
+        image: "/images/projects/personalized-nutrition.jpg",
         highlights: [
           "Browse up to 25 meals and filter by category or area",
           "Open full recipes with ingredients, instructions, nutrition, and cooking videos",
@@ -476,7 +478,7 @@ export const en = {
         subtitle: "Random Recipe Discovery",
         description:
           "An interactive recipe discovery app that serves a fresh meal idea and gives you the details you need to decide what to cook.",
-        image: "/images/projects/whats-for-dinner.png",
+        image: "/images/projects/whats-for-dinner.jpg",
         highlights: [
           "Discover a random recipe from a collection of 15 meals",
           "See ratings, cuisine, difficulty, prep and cook times, and servings",
@@ -700,12 +702,13 @@ export const ar: Dictionary = {
     links: {
       home: "الرئيسية",
       about: "عني",
-      services: "الخدمات",
       career: "المسيرة",
       work: "الأعمال",
-      pricing: "الأسعار",
       toolkit: "الأدوات",
+      services: "الخدمات",
+      serviceDetails: "تفاصيل الخدمات",
       process: "طريقة الشغل",
+      pricing: "الأسعار",
       contact: "تواصل",
     },
     openMenu: "فتح قائمة الأقسام",
@@ -714,8 +717,9 @@ export const ar: Dictionary = {
     closeLabel: "إغلاق",
     themeToLight: "التبديل للوضع الفاتح",
     themeToDark: "التبديل للوضع الداكن",
-    languageLabel: "اختار اللغة",
-    navigationLabel: "التنقل الرئيسي",
+    switchToArabic: "التبديل للعربية",
+    switchToEnglish: "التبديل للإنجليزية",
+    navigationLabel: "استكشف الموقع",
     backToTop: "الرجوع لأعلى الصفحة",
   },
   loading: {
@@ -987,7 +991,7 @@ export const ar: Dictionary = {
         subtitle: "تطبيق تواصل اجتماعي",
         description:
           "منصة اجتماعية لإنشاء الحساب وإدارة الملف الشخصي ونشر المحتوى والتفاعل مع منشورات الآخرين بالتعليقات.",
-        image: "/images/projects/media-app.png",
+        image: "/images/projects/media-app.jpg",
         highlights: [
           "إنشاء الحساب وتسجيل الدخول وتغيير كلمة المرور",
           "إضافة المنشورات وتعديلها وحذفها",
@@ -1009,7 +1013,7 @@ export const ar: Dictionary = {
         subtitle: "منصة مدونة للتصوير",
         description:
           "مدونة للتصوير الفوتوغرافي تتيح تصفح المقالات والبحث عنها وتصفيتها، مع عرض شبكي أو قائمة وصفحات كاملة للمقالات.",
-        image: "/images/projects/adasa.png",
+        image: "/images/projects/adasa.jpg",
         highlights: [
           "البحث في المقالات وتصفيتها حسب التصنيف",
           "التبديل بين العرض الشبكي والقائمة",
@@ -1031,7 +1035,7 @@ export const ar: Dictionary = {
         subtitle: "لوحة لإدارة المهام",
         description:
           "لوحة كانبان تفاعلية لترتيب المهام بين: مطلوب تنفيذها، قيد التنفيذ، ومكتملة، مع حفظ التغييرات في المتصفح.",
-        image: "/images/projects/kanban.png",
+        image: "/images/projects/kanban.jpg",
         highlights: [
           "إضافة المهام وعرضها وتعديلها وحذفها",
           "نقل المهام بين مراحل العمل",
@@ -1052,7 +1056,7 @@ export const ar: Dictionary = {
         subtitle: "لوحة بيانات الفضاء المباشرة",
         description:
           "لوحة فضائية تفاعلية بتجمع صورة ناسا الفلكية اليومية ومواعيد الإطلاق القادمة ومعلومات كواكب المجموعة الشمسية.",
-        image: "/images/projects/space-dashboard.png",
+        image: "/images/projects/space-dashboard.jpg",
         highlights: [
           "صورة ناسا الفلكية لليوم وتفاصيلها",
           "مواعيد الإطلاق القادمة من SpaceDevs",
@@ -1074,7 +1078,7 @@ export const ar: Dictionary = {
         subtitle: "بداية لبورتفوليو متجاوب",
         description:
           "مشروع بداية لبورتفوليو شخصي متجاوب، بأقسام للنبذة والمهارات والأعمال والخبرة والتوصيات والتواصل.",
-        image: "/images/projects/modern-developer-portfolio.png",
+        image: "/images/projects/modern-developer-portfolio.jpg",
         highlights: [
           "تخطيط متجاوب ودعم للكتابة العربية RTL",
           "أقسام للمهارات والمشاريع والخبرة والتوصيات",
@@ -1095,7 +1099,7 @@ export const ar: Dictionary = {
         subtitle: "موقع بورتفوليو لمطور Flutter · مشروع عميل",
         description:
           "موقع بورتفوليو نفذته لعميل يعمل مطور Flutter، ليعرض تطبيقاته ومهاراته وخبراته وخدماته وطرق التواصل معه بتجربة احترافية.",
-        image: "/images/projects/ali-emad-portfolio.png",
+        image: "/images/projects/ali-emad-portfolio.jpg",
         highlights: [
           "هوية بصرية داكنة ومقدمة متجاوبة تعرّف بالمطور",
           "أقسام للمهارات والخبرة والمشاريع والخدمات والتواصل",
@@ -1120,7 +1124,7 @@ export const ar: Dictionary = {
         subtitle: "إدارة جهات الاتصال",
         description:
           "تطبيق تفاعلي يحوّل دفتر الهاتف التقليدي إلى مساحة رقمية لتنظيم جهات الاتصال والبحث عنها والتواصل معها بسهولة.",
-        image: "/images/projects/contact-hub.png",
+        image: "/images/projects/contact-hub.jpg",
         highlights: [
           "إضافة جهات الاتصال وتعديلها وحذفها مع التحقق من البيانات",
           "البحث بالاسم أو رقم الهاتف أو البريد الإلكتروني",
@@ -1143,7 +1147,7 @@ export const ar: Dictionary = {
         subtitle: "متعقّب التغذية الذكي",
         description:
           "تطبيق ويب لمتابعة التغذية يجمع اكتشاف الوجبات والمنتجات الغذائية ومراقبة السعرات والعناصر الغذائية اليومية في مكان واحد.",
-        image: "/images/projects/personalized-nutrition.png",
+        image: "/images/projects/personalized-nutrition.jpg",
         highlights: [
           "تصفح حتى 25 وجبة وتصفيتها حسب النوع أو البلد",
           "عرض الوصفات ومكوناتها وطريقة تحضيرها وقيمتها الغذائية وفيديو الطبخ",
@@ -1167,7 +1171,7 @@ export const ar: Dictionary = {
         subtitle: "اكتشاف وصفات عشوائية",
         description:
           "تطبيق تفاعلي لاكتشاف وصفات الطعام، يعرض لك فكرة وجبة جديدة مع التفاصيل التي تساعدك تختار هتطبخ إيه.",
-        image: "/images/projects/whats-for-dinner.png",
+        image: "/images/projects/whats-for-dinner.jpg",
         highlights: [
           "اكتشف وصفة عشوائية من مجموعة تضم 15 وجبة",
           "شاهد التقييم والمطبخ ومستوى الصعوبة وأوقات التحضير والطهي وعدد الحصص",

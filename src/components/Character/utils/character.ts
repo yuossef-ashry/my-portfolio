@@ -1,7 +1,8 @@
 import * as THREE from "three";
-import { DRACOLoader, GLTFLoader } from "three-stdlib";
-import type { GLTF } from "three-stdlib";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+import { GLTFLoader, type GLTF } from "three/addons/loaders/GLTFLoader.js";
 import { decryptFile } from "./decrypt";
+import { publicAsset } from "../../../utils/publicAsset";
 
 const setCharacter = (
   renderer: THREE.WebGLRenderer,
@@ -10,12 +11,12 @@ const setCharacter = (
 ) => {
   const loader = new GLTFLoader();
   const dracoLoader = new DRACOLoader();
-  dracoLoader.setDecoderPath("/draco/");
+  dracoLoader.setDecoderPath(publicAsset("draco/"));
   loader.setDRACOLoader(dracoLoader);
 
   const loadCharacter = async (): Promise<GLTF> => {
     const encryptedBlob = await decryptFile(
-      "/models/character.enc",
+      publicAsset("models/character.enc"),
       "Character3D#@"
     );
     const blobUrl = URL.createObjectURL(new Blob([encryptedBlob]));

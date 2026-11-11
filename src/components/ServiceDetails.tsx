@@ -1,5 +1,5 @@
 import { MdArrowOutward } from "react-icons/md";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import "./styles/ServiceDetails.css";
 
 const ServiceDetails = () => {

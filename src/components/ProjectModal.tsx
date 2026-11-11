@@ -181,7 +181,11 @@ const ProjectModal = ({ project, copy, onClose }: ProjectModalProps) => {
             <div className="project-modal-preview-footer">
               <span>{showLivePreview ? project.links.live : copy.visualPreview}</span>
               {project.links.live && (
-                <a href={project.links.live} target="_blank" rel="noreferrer">
+                <a
+                  href={project.links.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {copy.openLive} <MdArrowOutward aria-hidden="true" />
                 </a>
               )}
@@ -219,7 +223,7 @@ const ProjectModal = ({ project, copy, onClose }: ProjectModalProps) => {
                 className="project-modal-repo"
                 href={project.links.repo}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {copy.sourceCode} <MdArrowOutward aria-hidden="true" />
               </a>
